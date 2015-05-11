@@ -313,7 +313,7 @@ defaults write com.apple.spotlight orderedItems -array \
 
 echo ""
 echo "Load new settings before rebuilding the index"
-killall mds > /dev/null 2>&1
+killall mds 
 
 echo ""
 echo "Make sure indexing is enabled for the main volume"
