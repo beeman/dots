@@ -47,15 +47,15 @@ apt-get install -y git curl
 
 # Add public ssh key
 mkdir -p $home/.ssh
-curl -L "https://gist.github.com/MatthewMueller/38b8dac7b6b35e946822/raw/85a63f31925ac6e0a6c13826573f3a005c765f10/id_rsa.pub" >> $home/.ssh/authorized_keys
+curl -L "https://github.com/beeman.keys" >> $home/.ssh/authorized_keys
 chown -R $user:$user $home/.ssh
 chmod 700 $home/.ssh
 chmod 600 $home/.ssh/authorized_keys
 
 # Install fail2ban
-apt-get install -y fail2ban
-curl -L "https://gist.github.com/MatthewMueller/38b8dac7b6b35e946822/raw/0c6e859ed2ae3cbb2bc87073b96db4954aa74dda/fail2ban.local" > /etc/fail2ban/jail.local
-service fail2ban restart
+# apt-get install -y fail2ban
+# curl -L "https://gist.github.com/MatthewMueller/38b8dac7b6b35e946822/raw/0c6e859ed2ae3cbb2bc87073b96db4954aa74dda/fail2ban.local" > /etc/fail2ban/jail.local
+# service fail2ban restart
 
 # Secure SSH and remove root access
 sudo sed -i.bak \

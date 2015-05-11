@@ -199,8 +199,8 @@ echo "Enabling snap-to-grid for icons on the desktop and in other icon views"
 #defaults write com.apple.dock persistent-apps -array
 
 echo ""
-echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 36
+echo "Setting the icon size of Dock items to 18 pixels for optimal size/screen-realestate"
+defaults write com.apple.dock tilesize -int 18
 
 echo ""
 echo "Speeding up Mission Control animations and grouping windows by application"
@@ -310,7 +310,7 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
-	
+
 echo ""
 echo "Load new settings before rebuilding the index"
 killall mds > /dev/null 2>&1
@@ -324,7 +324,7 @@ echo "Rebuild the index from scratch"
 sudo mdutil -E / > /dev/null
 
 ###############################################################################
-# Terminal & iTerm 2 
+# Terminal & iTerm 2
 ###############################################################################
 
 echo ""
@@ -397,9 +397,9 @@ echo "Disable computer sleep and stop the display from shutting off"
 sudo pmset -a sleep 0
 sudo pmset -a displaysleep 0
 
-echo ""
-echo "Disable annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+# echo ""
+# echo "Disable annoying backswipe in Chrome"
+# defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 ###############################################################################
 # Kill affected applications

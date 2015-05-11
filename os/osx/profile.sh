@@ -183,7 +183,7 @@ alias subl=atom
 ## gopen - open to own github
 
 function gopen() {
-  open "https://github.com/matthewmueller/${1}";
+  open "https://github.com/beeman/${1}";
 }
 
 ## Open localhost
