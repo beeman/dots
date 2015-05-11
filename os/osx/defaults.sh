@@ -311,9 +311,9 @@ defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
 	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
 
-echo ""
-echo "Load new settings before rebuilding the index"
-killall mds 
+# echo ""
+# echo "Load new settings before rebuilding the index"
+# killall mds > /dev/null 2>&1
 
 echo ""
 echo "Make sure indexing is enabled for the main volume"
